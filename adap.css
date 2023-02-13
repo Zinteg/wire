@@ -1,0 +1,41 @@
+@media screen and (max-width: 500px) {
+    .tdlDiv {
+      max-height: 210px;
+      overflow-y: scroll;
+    }
+      .search {
+          position: relative;
+          width: 300px;
+          height: 60px;
+          background-color: #fff;
+          border-radius: 60px;
+          transition: 0.5s;
+          overflow: hidden;
+          margin-top: 18rem;
+        }
+      .search .input {
+          position: relative;
+          width: 250px;
+          height: 60px;
+          left: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .seimg {
+          width: 36px;
+          height: 36px;
+          margin: 12px;
+        }
+        .search .input input {
+          position: absolute;
+          top: 0;
+          width: 82%;
+          height: 100%;
+          border: none;
+          outline: none;
+          font-size: 18px;
+          padding: 10px 0;
+          margin-left: -3rem;
+        }
+    }

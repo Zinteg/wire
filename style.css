@@ -1,0 +1,217 @@
+*{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #16151a;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.search {
+    position: relative;
+    width: 500px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 60px;
+    transition: 0.5s;
+    margin-top: 27rem;
+}
+.search .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+.search .input {
+    position: relative;
+    width: 398px;
+    height: 60px;
+    left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search .input input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 10px 0;
+}
+.clear {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    right: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.clear::before {
+    position: absolute;
+    content: '';
+    width: 1.5px;
+    height: 15px;
+    background-color: #999;
+    transform: rotate(45deg)
+}
+.clear::after {
+    position: absolute;
+    content: '';
+    width: 1.5px;
+    height: 15px;
+    background-color: #999;
+    transform: rotate(315deg)
+}
+.game-button {
+  position: absolute;
+  top: 10px;
+  right: 1rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  width: 0rem;
+  height: 0rem;
+}
+.txt {
+  display: flex;
+  font-family: Arial;
+  width: 15rem;
+  height: auto;
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  justify-content: center;
+  align-content: center;
+  color: white;
+}
+.servs {
+  display: flex;
+  font-family: Arial;
+  width: 4rem;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 3rem;
+  position: absolute;
+  top: 44rem;
+  right: 1rem;
+  justify-content: center;
+  align-content: center;
+}
+.servs a {
+  width: auto;
+  height: auto;
+}
+.servs img{
+  color: #ffffff;
+  margin: 3rem;
+  width: 36px;
+}
+#overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  width: auto;
+  height: 60px;
+  background-color: #0000007a;
+  transform: translate(-50%,0);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: saturate(180%) blur(20px);
+}
+#mlr {
+  transform: translate(0%,0);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.marbox {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 35px;
+  margin-top: 4px;
+}
+.form-control {
+  display: flex;
+  margin: 11px auto;
+  border: 3px solid #fffb00;
+  border-radius: 2rem;
+  padding: 4px 0px;
+  font-size: 19px;
+}
+.bookmark-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.bookmark-box {
+  width: 100px;
+  height: 100px;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.bookmark-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 17px;
+  position: relative;
+  height: 125px;
+}
+.bookmark-box {
+  width: 100px;
+  height: 100px;
+  background-color: #292633;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  border-radius: 1rem;
+}
+.bookti {
+  margin-top: 5px;
+  color: white;
+  font-size: 12px;
+}
+.bookmark-box img {
+  width: 40px;
+}
