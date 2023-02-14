@@ -73,11 +73,12 @@ body {
     height: 18px;
     right: 18px;
     cursor: pointer;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
   }
 .clear::before {
+  display: block;
     position: absolute;
     content: '';
     width: 1.5px;
@@ -86,6 +87,7 @@ body {
     transform: rotate(45deg)
 }
 .clear::after {
+  display: block;
     position: absolute;
     content: '';
     width: 1.5px;
