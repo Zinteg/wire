@@ -22,46 +22,48 @@ body {
     user-select: none;
 }
 .search {
-    position: relative;
-    width: 500px;
-    height: 60px;
-    background-color: #fff;
-    border-radius: 60px;
-    transition: 0.5s;
-    margin-top: 27rem;
+  position: relative;
+  width: 500px;
+  height: 60px;
+  background-color: #292633;
+  border-radius: 3rem;
+  transition: 0.5s;
+  margin-top: 27rem;
 }
 .search .icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background-color: #fff;
-    border-radius: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #292633;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
 }
 .search .input {
-    position: relative;
-    width: 398px;
-    height: 60px;
-    left: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 398px;
+  height: 60px;
+  left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .search .input input {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    padding: 10px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 97%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 10px 0;
+  background-color: #292633;
+  color: white;
 }
 .clear {
     position: absolute;
