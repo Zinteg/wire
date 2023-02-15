@@ -138,20 +138,3 @@ taskList.appendChild(li);
 taskInput.value = '';
 }
 });
-
-//Крестик//
-const input = document.getElementById("searchInput");
-const clear = document.querySelector(".clear");
-
-input.addEventListener("input", function () {
-  if (this.value.length > 0) {
-    clear.style.display = "flex";
-  } else {
-    clear.style.display = "none";
-  }
-});
-
-clear.addEventListener("click", function () {
-  input.value = "";
-  clear.style.display = "none";
-});
