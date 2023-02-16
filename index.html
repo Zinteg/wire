@@ -7,56 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Сайт с мульти поиском. С помощью которого ты можешь переключиться сразу же на несколько поисковых систем например: Google, Яндекс, Bing, Yahoo.">
-      <!--Метаданные-->
+  <!---->
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://zinteg.github.io/tab/img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="adap.css">
     <title>Wire</title>
 </head>
   <body onload="document.getElementById('searchInput').value = ''">
     <div class="game-button"></div>
 
-  <!--<div id="overlay">
-    <div id="mlr">
-     <a target="_blank" href="https://zinteg.github.io/brochure/"><img class="marbox" src="https://zinteg.github.io/brochure/img/logo-player.svg" alt="brochure"></a>
-     <a target="_blank" href="https://zinteg.github.io/chelook/"><img class="marbox" src="http://zinteg.github.io/chelook/img/logo/logo-checir.svg" alt="chelook"></a>
-     <a target="_blank" href="https://zinteg.github.io/task/"><img class="marbox" src="https://zinteg.github.io/task/img/task.svg" alt="task"></a>
-    </div>
-  </div>-->
     <div class="search">
-        <input class="icon" style="width: 36px; height: 36px; margin: 12px" type="image" id="search-img" src="https://zinteg.github.io/files/img/google.webp" alt="Search">
-        <form id="search-form" class="input" onsubmit="searchGoogle(); return false;">
-            <input class="message" type="text" placeholder="Всё тут" id="searchInput" name="search">
-        </form> 
-        <!--<div class="search-container">
+      <input class="icon" style="width: 36px; height: 36px; margin: 12px" type="image" id="search-img" src="https://zinteg.github.io/files/img/google.webp" alt="Search">
+      <form id="search-form" class="input" onsubmit="searchGoogle(); return false;">
+          <input class="message" type="text" placeholder="Всё тут" id="searchInput" name="search">
+          <span class="clear" onclick="document.getElementById('searchInput').value = ''"></span>
           <div class="bookmark-container">
-            <div class="bookmark-box">
-              <a target="_blank" href="https://youtube.com/" alt="Ссылка закладки">
-                <img style="width: 43px; height: 43px;"  src="https://www.youtube.com/s/desktop/5191a190/img/favicon_144x144.png" alt="Лого закладки">
-                <h1 class="bookti" alt="Название закладки">YouTube</h1>
-              </a>
-            </div>
-            <div class="bookmark-box">
-              <a target="_blank" href="https://twitch.tv/" alt="Ссылка закладки">
-                <img style="width: 43px; height: 43px;"  src="https://zinteg.github.io/files/img/twitch.png" alt="Лого закладки">
-                <h1 class="bookti" style="width: 20px;" alt="Название закладки">Twitch</h1>
-              </a>
-            </div>
-            <div class="bookmark-box">
-              <a target="_blank" href="https://telegram.org" alt="Ссылка закладки">
-                <img style="width: 43px; height: 43px;"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" alt="Лого закладки">
-                <h1 class="bookti" alt="Название закладки">Telegram</h1>
-              </a>
-            </div>
-            <div class="bookmark-box">
-              <a target="_blank" href="https://vk.com" alt="Ссылка закладки">
-                <img style="width: 43px; height: 43px;" src="https://zinteg.github.io/files/img/webp/vk.webp" alt="Лого закладки">
-                <h1 class="bookti" alt="Название закладки">VK</h1>
-              </a>
-            </div>
+              <img class="bookmark" src="img/bookmark.svg" alt="добавить закладку" onclick="addBookmark()">
           </div>
-        </div>-->
-        <span class="clear" onclick="document.getElementById('searchInput').value = '' "></span>      
+      </form> 
+      <div class="bookmark-list"></div>
+      <span class="bookmark-text"></span>
+      <span class="bookmark-menu">&#x22EE;</span>
+  </div>
+
     </div>
     <script src="search.js"></script>
     <script>
@@ -75,6 +48,73 @@
         input.value = "";
         clear.style.display = "none";
       });
+
+
+
+
+
+
+
+
+
+
+
+
+
+      function addBookmark() {
+        var input = document.getElementById("searchInput").value;
+        if (input) {
+          var bookmarkItem = document.createElement("div");
+          bookmarkItem.className = "bookmark-item";
+          bookmarkItem.innerText = input;
+          document.querySelector(".bookmark-list").appendChild(bookmarkItem);
+      
+          // add click event listener to bookmark item
+          bookmarkItem.addEventListener("click", function() {
+            this.remove();
+          });
+      
+          // save bookmarks to localStorage
+          var bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+          bookmarks.push(input);
+          localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+        }
+      }
+      
+      function loadBookmarks() {
+        var bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+        bookmarks.forEach(function(bookmark) {
+          var bookmarkItem = document.createElement("div");
+          bookmarkItem.className = "bookmark-item";
+          bookmarkItem.innerText = bookmark;
+          document.querySelector(".bookmark-list").appendChild(bookmarkItem);
+      
+          // add click event listener to bookmark item
+          bookmarkItem.addEventListener("click", function() {
+            this.remove();
+            // remove bookmark from localStorage
+            var bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+            bookmarks.splice(bookmarks.indexOf(bookmark), 1);
+            localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+          });
+        });
+      }
+      
+      window.addEventListener("load", function() {
+        loadBookmarks();
+      });
+      
+
+
+
+      // add keydown event listener to bookmark item
+  bookmarkItem.addEventListener("keydown", function(event) {
+    if (event.key === " ") {
+      var bookmarkText = this.innerText;
+      document.getElementById("searchInput").value = bookmarkText;
+      event.preventDefault();
+    }
+  });
     </script>
 </body>
 </html>
