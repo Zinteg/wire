@@ -1,218 +1,245 @@
 *{
-    font-family: Arial;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 a {
-  text-decoration: none;
+text-decoration: none;
 }
 li {
-  list-style-type: none;
+list-style-type: none;
 }
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: #16151a;
-    user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #16151a;
+  user-select: none;
 }
 .search {
-  position: relative;
-  width: 500px;
-  height: 60px;
-  background-color: #292633;
-  border-radius: 3rem;
-  transition: 0.5s;
-  margin-top: 27rem;
+position: relative;
+width: 500px;
+height: 60px;
+background-color: #292633;
+border-radius: 3rem;
+transition: 0.5s;
+margin-top: 27rem;
 }
 .search .icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  background-color: #292633;
-  border-radius: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  cursor: pointer;
+position: absolute;
+top: 0;
+left: 0;
+width: 60px;
+height: 60px;
+background-color: #292633;
+border-radius: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+cursor: pointer;
 }
 .search .input {
-  position: relative;
-  width: 398px;
-  height: 60px;
-  left: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+position: relative;
+width: 398px;
+height: 60px;
+left: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .search .input input {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  padding: 10px 0;
-  background-color: #292633;
-  color: white;
+position: absolute;
+top: 0;
+width: 100%;
+height: 100%;
+border: none;
+outline: none;
+font-size: 18px;
+padding: 10px 0;
+background-color: #292633;
+color: white;
 }
 .clear {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    right: 18px;
-    cursor: pointer;
-    display: none;
-    justify-content: center;
-    align-items: center;
-  }
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 18px;
+height: 18px;
+right: -20px;
+cursor: pointer;
+display: none;
+justify-content: center;
+align-items: center;
+}
 .clear::before {
-  display: block;
-    position: absolute;
-    content: '';
-    width: 1.5px;
-    height: 15px;
-    background-color: #999;
-    transform: rotate(45deg)
+display: block;
+  position: absolute;
+  content: '';
+  width: 1.5px;
+  height: 15px;
+  background-color: #999;
+  transform: rotate(45deg)
 }
 .clear::after {
-  display: block;
-    position: absolute;
-    content: '';
-    width: 1.5px;
-    height: 15px;
-    background-color: #999;
-    transform: rotate(315deg)
+display: block;
+  position: absolute;
+  content: '';
+  width: 1.5px;
+  height: 15px;
+  background-color: #999;
+  transform: rotate(315deg)
 }
 .game-button {
-  position: absolute;
-  top: 10px;
-  right: 1rem;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  width: 0rem;
-  height: 0rem;
+position: absolute;
+top: 10px;
+right: 1rem;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+cursor: pointer;
+width: 0rem;
+height: 0rem;
 }
 .txt {
-  display: flex;
-  font-family: Arial;
-  width: 15rem;
-  height: auto;
-  position: absolute;
-  top: 4rem;
-  right: 2rem;
-  justify-content: center;
-  align-content: center;
-  color: white;
+display: flex;
+font-family: Arial;
+width: 15rem;
+height: auto;
+position: absolute;
+top: 4rem;
+right: 2rem;
+justify-content: center;
+align-content: center;
+color: white;
 }
 .servs {
-  display: flex;
-  font-family: Arial;
-  width: 4rem;
-  height: auto;
-  background-color: #ffffff;
-  border-radius: 3rem;
-  position: absolute;
-  top: 44rem;
-  right: 1rem;
-  justify-content: center;
-  align-content: center;
+display: flex;
+font-family: Arial;
+width: 4rem;
+height: auto;
+background-color: #ffffff;
+border-radius: 3rem;
+position: absolute;
+top: 44rem;
+right: 1rem;
+justify-content: center;
+align-content: center;
 }
 .servs a {
-  width: auto;
-  height: auto;
+width: auto;
+height: auto;
 }
 .servs img{
-  color: #ffffff;
-  margin: 3rem;
-  width: 36px;
+color: #ffffff;
+margin: 3rem;
+width: 36px;
 }
 #overlay {
-  position: absolute;
-  left: 50%;
-  bottom: 35px;
-  width: auto;
-  height: 60px;
-  background-color: #0000007a;
-  transform: translate(-50%,0);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: saturate(180%) blur(20px);
+position: absolute;
+left: 50%;
+bottom: 35px;
+width: auto;
+height: 60px;
+background-color: #0000007a;
+transform: translate(-50%,0);
+border-radius: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+backdrop-filter: saturate(180%) blur(20px);
 }
 #mlr {
-  transform: translate(0%,0);
-  margin-left: 10px;
-  margin-right: 10px;
+transform: translate(0%,0);
+margin-left: 10px;
+margin-right: 10px;
 }
 .marbox {
-  margin-left: 15px;
-  margin-right: 15px;
-  width: 35px;
-  margin-top: 4px;
+margin-left: 15px;
+margin-right: 15px;
+width: 35px;
+margin-top: 4px;
 }
 .form-control {
-  display: flex;
-  margin: 11px auto;
-  border: 3px solid #fffb00;
-  border-radius: 2rem;
-  padding: 4px 0px;
-  font-size: 19px;
+display: flex;
+margin: 11px auto;
+border: 3px solid #fffb00;
+border-radius: 2rem;
+padding: 4px 0px;
+font-size: 19px;
 }
 .bookmark-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 10px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-top: 10px;
 }
 .bookmark-box {
-  width: 100px;
-  height: 100px;
-  background-color: #f2f2f2;
+width: 100px;
+height: 100px;
+background-color: #f2f2f2;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin-left: 10px;
+}
+.bookmark-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+position: relative;
+margin-left: 35rem;
+height: 41px;
+}
+.bookmark {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin-top: -.6rem;
+}
+.bookmark:hover {
+transform: scale(1.2);
+}
+.bookmark-item {
+  display: inline-block;
+  background-color: #292633;
+  border-radius: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+.bookmark-list {
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  margin-left: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
 }
 
-.bookmark-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 17px;
-  position: relative;
-  height: 125px;
+.bookmark-item button {
+margin-left: 8px;
+border: none;
+background: transparent;
+cursor: pointer;
 }
-.bookmark-box {
-  width: 100px;
-  height: 100px;
-  background-color: #292633;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 10px;
-  border-radius: 1rem;
-}
-.bookti {
-  margin-top: 5px;
-  color: white;
-  font-size: 12px;
-}
-.bookmark-box img {
-  width: 40px;
+.bookmark-item:hover {
+  text-decoration: line-through;
+  background-color: #cdc9da;
+  color: #000000;
 }
