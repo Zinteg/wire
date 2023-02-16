@@ -7,11 +7,10 @@
           position: relative;
           width: 300px;
           height: 60px;
-          background-color: #fff;
-          border-radius: 60px;
           transition: 0.5s;
           overflow: hidden;
           margin-top: 18rem;
+          background-color: #292633;
         }
       .search .input {
           position: relative;
@@ -37,5 +36,9 @@
           font-size: 18px;
           padding: 10px 0;
           margin-left: -3rem;
+          background-color: #292633;
+        }
+        .search .icon {
+          background-color: #292633;
         }
     }
