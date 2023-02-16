@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <!--Метаданные-->
+  <!---->
     <meta charset="UTF-8">
     <meta property="og:title" content="Tab">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,20 +17,19 @@
     <div class="game-button"></div>
 
     <div class="search">
-      <input class="icon" style="width: 36px; height: 36px; margin: 12px" type="image" id="search-img" src="https://zinteg.github.io/files/img/google.webp" alt="Search">
+      <input class="icon" style="width: 36px; height: 36px; margin: 12px" type="image" id="search-img" src="https://zinteg.github.io/files/img/google.webp" alt="Search" title="Сменить поисковую систему">
       <form id="search-form" class="input" onsubmit="searchGoogle(); return false;">
-          <input class="message" type="text" placeholder="Всё тут" id="searchInput" name="search">
+          <input class="message" type="text" placeholder="Всё тут" id="searchInput" name="search" title="Ведите текст...">
           <span class="clear" onclick="document.getElementById('searchInput').value = ''"></span>
           <div class="bookmark-container">
-              <img class="bookmark" src="img/bookmark.svg" alt="добавить закладку" onclick="addBookmark()">
+              <img class="bookmark" src="img/bookmark.svg" alt="Добавление запроса в закладки"  title="Добавление запроса в закладки" onclick="addBookmark()">
           </div>
       </form> 
-      <div class="bookmark-list"></div>
-      <span class="bookmark-text"></span>
-      <span class="bookmark-menu">&#x22EE;</span>
+      <div class="bookmark-list" title="Удалить закладку"></div>
   </div>
 
     </div>
     <script src="search.js"></script>
+    <script src="bookmark.js"></script>
 </body>
 </html>
