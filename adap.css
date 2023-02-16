@@ -20,6 +20,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          background-color: #292633;
         }
         .seimg {
           width: 36px;
