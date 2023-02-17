@@ -40,7 +40,7 @@ button.addEventListener('click', () => {
       searchImg.src = "https://zinteg.github.io/files/img/bing.svg";
       currentSearchEngine = "bing";
     } else {
-      searchImg.src = "https://zinteg.github.io/files/img/webp/google.webp";
+      searchImg.src = "https://zinteg.github.io/files/img/google.svg";
       currentSearchEngine = "google";
     }
     localStorage.setItem("currentSearchEngine", currentSearchEngine);
@@ -51,7 +51,7 @@ button.addEventListener('click', () => {
     if (savedSearchEngine) {
       currentSearchEngine = savedSearchEngine;
       if (currentSearchEngine === "google") {
-        searchImg.src = "https://zinteg.github.io/files/img/webp/google.webp";
+        searchImg.src = "https://zinteg.github.io/files/img/google.svg";
       } else if (currentSearchEngine === "yandex") {
         searchImg.src = "https://zinteg.github.io/files/img/webp/yandex.webp";
       } else if (currentSearchEngine === "yahoo") {
@@ -76,4 +76,3 @@ searchInput.addEventListener('input', function() {
 // Сохранить значение поля ввода в localStorage
 localStorage.setItem('SearchInputValue', searchInput.value);
 });
-
