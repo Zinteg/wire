@@ -95,98 +95,11 @@ display: block;
   background-color: #999;
   transform: rotate(315deg)
 }
-.game-button {
-position: absolute;
-top: 10px;
-right: 1rem;
-background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);
-cursor: pointer;
-width: 0rem;
-height: 0rem;
-}
-.txt {
-display: flex;
-font-family: Arial;
-width: 15rem;
-height: auto;
-position: absolute;
-top: 4rem;
-right: 2rem;
-justify-content: center;
-align-content: center;
-color: white;
-}
-.servs {
-display: flex;
-font-family: Arial;
-width: 4rem;
-height: auto;
-background-color: #ffffff;
-border-radius: 3rem;
-position: absolute;
-top: 44rem;
-right: 1rem;
-justify-content: center;
-align-content: center;
-}
-.servs a {
-width: auto;
-height: auto;
-}
-.servs img{
-color: #ffffff;
-margin: 3rem;
-width: 36px;
-}
-#overlay {
-position: absolute;
-left: 50%;
-bottom: 35px;
-width: auto;
-height: 60px;
-background-color: #0000007a;
-transform: translate(-50%,0);
-border-radius: 20px;
-display: flex;
-align-items: center;
-justify-content: center;
-backdrop-filter: saturate(180%) blur(20px);
-}
-#mlr {
-transform: translate(0%,0);
-margin-left: 10px;
-margin-right: 10px;
-}
-.marbox {
-margin-left: 15px;
-margin-right: 15px;
-width: 35px;
-margin-top: 4px;
-}
-.form-control {
-display: flex;
-margin: 11px auto;
-border: 3px solid #fffb00;
-border-radius: 2rem;
-padding: 4px 0px;
-font-size: 19px;
-}
 .bookmark-container {
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 margin-top: 10px;
-}
-.bookmark-box {
-width: 100px;
-height: 100px;
-background-color: #f2f2f2;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-margin-left: 10px;
 }
 .bookmark-container {
 display: flex;
