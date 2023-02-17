@@ -1,3 +1,6 @@
+const button = document.querySelector('.game-button');
+const menu = document.querySelector('.game-menu');
+
 button.addEventListener('click', () => {
   menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
 });
