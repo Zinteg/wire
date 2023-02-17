@@ -95,11 +95,29 @@ display: block;
   background-color: #999;
   transform: rotate(315deg)
 }
+.form-control {
+display: flex;
+margin: 11px auto;
+border: 3px solid #fffb00;
+border-radius: 2rem;
+padding: 4px 0px;
+font-size: 19px;
+}
 .bookmark-container {
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 margin-top: 10px;
+}
+.bookmark-box {
+width: 100px;
+height: 100px;
+background-color: #f2f2f2;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin-left: 10px;
 }
 .bookmark-container {
 display: flex;
