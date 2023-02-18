@@ -20,7 +20,6 @@
 </head>
   <body onload="document.getElementById('searchInput').value = ''">
     <div class="game-button"></div>
-
     <div class="search">
       <input class="icon" style="width: 36px; height: 36px; margin: 12px" type="image" id="search-img" src="https://zinteg.github.io/files/img/google.svg" alt="Search" title="Сменить поисковую систему">
       <form id="search-form" class="input" onsubmit="searchGoogle(); return false;">
@@ -36,13 +35,6 @@
     </div>
     <script src="search.js"></script>
     <script src="bookmark.js"></script>
-    <script>
-      document.addEventListener("keydown", function(event) {
-        if (event.ctrlKey && event.key === "s") {
-          event.preventDefault();
-        }
-      });
-      
-    </script>
+    <script src="s.js"></script>
 </body>
 </html>
