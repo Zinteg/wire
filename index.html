@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://zinteg.github.io/tab/img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="adap.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+
     <title>Wire</title>
 </head>
   <body onload="document.getElementById('searchInput').value = ''">
@@ -19,7 +24,7 @@
     <div class="search">
       <input class="icon" style="width: 36px; height: 36px; margin: 12px" type="image" id="search-img" src="https://zinteg.github.io/files/img/google.svg" alt="Search" title="Сменить поисковую систему">
       <form id="search-form" class="input" onsubmit="searchGoogle(); return false;">
-          <input class="message" type="text" placeholder="Всё тут" id="searchInput" name="search" title="Ведите текст...">
+          <input class="message" type="text" placeholder="Всё тут" id="searchInput" name="search" title="Ведите текст..." data-lang="ru">
           <span class="clear" onclick="document.getElementById('searchInput').value = ''"></span>
           <div class="bookmark-container">
               <img class="bookmark" src="img/bookmark.svg" alt="Добавление запроса в закладки"  title="Добавление запроса в закладки" onclick="addBookmark()">
@@ -31,5 +36,13 @@
     </div>
     <script src="search.js"></script>
     <script src="bookmark.js"></script>
+    <script>
+      document.addEventListener("keydown", function(event) {
+        if (event.ctrlKey && event.key === "s") {
+          event.preventDefault();
+        }
+      });
+      
+    </script>
 </body>
 </html>
