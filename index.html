@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!---->
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Tab">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Сайт с мульти поиском. С помощью которого ты можешь переключиться сразу же на несколько поисковых систем например: Google, Яндекс, Bing.">
+  <!---->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://jtglkhjgkhtgkh.github.io/wire/img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="adapt.css">
+    <link href="https://zinteg.github.io/files/css2.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <title>Wire</title>
+</head>
+  <body>
+     <!-- <div class="headline">
+      <img class="logo" src="img/logo/favicon-full.svg" alt="">
+    </div>-->
+    <div class="search">
+      <form id="searchForm" action="" method="get">
+        <input class="icon" style="width: 36px; height: 36px; margin: 12px" type="image" id="search-img" src="https://zinteg.github.io/files/img/google.svg" alt="Search" title="Сменить поисковую систему">
+        <input class="message" type="text" placeholder="Всё тут" id="searchInput" name="search" title="Введите текст...">
+        <div class="clear"><img src="https://jtglkhjgkhtgkh.github.io/wire/img/clear.svg" alt="Clear search"></div>
+        <div id="search-suggestions"></div>
+      </form>
+      <div class="sico" role="button" onclick="submitSearch()" title="Кнопка поиска" id="search-btn">Найти</div>
+    </div>    
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <img class="popimg" src="https://jtglkhjgkhtgkh.github.io/wire/img/gif/hide.gif" alt="">
+        <p>
+          Пользуясь сайтом, вы подтверждаете, что вы даёте согласие на использование файлов cookie🍪. Так как мы не передаём информацию на сервера, значит вся информация сохраняется на вашем устройстве. Вследствие этого, при использовании сервиса на другом устройства информация может не сохранится. Если вы хотите очистить историю использования сайта, то вы можете удалить файлы куки в вашем браузере с нашего сайта.
+        </p>
+        <button id="closeBtn" class="popup-close-btn">Закрыть</button>
+      </div>
+    </div>
+    <script src="js/search.js"></script>
+    <script src="js/clear.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+// Получаем ссылки на элементы формы поиска
+const searchForm = document.querySelector('#searchForm');
+const searchInput = document.querySelector('#searchInput');
+const searchSuggestions = document.querySelector('#search-suggestions');
+
+// Функция для отправки запроса на сервер и получения списка поисковых запросов
+function fetchSearchSuggestions(query) {
+  // Отправляем GET-запрос на сервер и передаем введенный пользователем текст запроса
+  fetch(`/api/search?q=${query}`)
+    .then(response => response.json())
+    .then(data => {
+      // Очищаем выпадающее меню
+      searchSuggestions.innerHTML = '';
+
+      // Создаем элементы списка и добавляем их в выпадающее меню
+      data.forEach(suggestion => {
+        const suggestionItem = document.createElement('div');
+        suggestionItem.classList.add('search-suggestion');
+        suggestionItem.textContent = suggestion;
+        suggestionItem.addEventListener('click', () => {
+          // При выборе запроса заполняем поле поиска и отправляем форму
+          searchInput.value = suggestion;
+          searchForm.submit();
+        });
+        searchSuggestions.appendChild(suggestionItem);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching search suggestions:', error);
+    });
+}
+
+// Функция для обработки ввода пользователя
+function handleSearchInput() {
+  const query = searchInput.value.trim();
+
+  if (query === '') {
+    // Если пользователь очистил поле поиска, очищаем выпадающее меню
+    searchSuggestions.innerHTML = '';
+  } else {
+    // Иначе отправляем запрос на сервер и получаем список поисковых запросов
+    fetchSearchSuggestions(query);
+  }
+}
+
+searchInput.addEventListener('input', handleSearchInput);
+    </script>
+
+
+
+
+    <script type="module">
+
+      // Import the functions you need from the SDKs you need
+    
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+    
+      // TODO: Add SDKs for Firebase products that you want to use
+    
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+    
+      // Your web app's Firebase configuration
+    
+      const firebaseConfig = {
+    
+        apiKey: "AIzaSyDfFFpSPrjyM-eLwaKqN62tpmYfr0rqiAA",
+    
+        authDomain: "wire-f01e1.firebaseapp.com",
+    
+        projectId: "wire-f01e1",
+    
+        storageBucket: "wire-f01e1.appspot.com",
+    
+        messagingSenderId: "276619259222",
+    
+        appId: "1:276619259222:web:2050fc531515ab31457af7"
+    
+      };
+    
+    
+      // Initialize Firebase
+    
+      const app = initializeApp(firebaseConfig);
+    
+    </script>
+</body>
+</html>
