@@ -1,0 +1,147 @@
+html {
+    background-color: #14161a;
+    background-size: 100% cover;
+    background-position: end;
+    font-family: 'Noto Sans';
+    overflow: hidden;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.sil {
+    color: #dadada;
+    padding: .25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.sil:hover {
+    color: #cccccc;
+    padding: .25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+}
+#searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+input#searchInput.message {
+    border: none;
+    font-size: 1.12rem;
+    padding-right: 3rem;
+    color: white;
+    outline: none;
+    padding-left: 3.5rem;
+}
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.5rem;
+    background-color: #292633;
+    color: white;
+}
+
+
+
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.5rem;
+    background-color:#292633;
+    color: white;
+}
+.message {
+    width: 19rem;
+    height: 3.7rem;
+    border-radius: 3rem;
+    background-color:#292633;
+    border: 0;
+}
+input#searchInput.message {
+    border: none;
+    font-size: 1.12rem;
+    padding-right: 3rem;
+    color: white;
+    outline: none;
+    padding-left: 1rem;
+  }
+.search .input {
+    position: relative;
+    width: 24.8rem;
+    height: 3.7rem;
+    left: 3.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 4rem;
+    background-color: #ffcc00;
+    margin-right: .7rem;
+    border-radius: .8rem;
+    font-size: .9rem;
+    color: #000;
+    user-select: none;
+    cursor: pointer;
+    padding: 0 .4rem;
+}
+    
+.sico:hover {
+    background-color: #ecbd01;
+    color: #000;
+}
+.src {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+}
+.srcimg {
+    width: 10rem;
+}
+body div.foot {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    color: white;
+    height: 100%;
+}

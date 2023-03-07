@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="adapt.css">
+  <link rel="shortcut icon" href="https://jtglkhjgkhtgkh.github.io/wire/img/favicon.svg" type="image/x-icon">
+  <link href="https://zinteg.github.io/files/css2.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+  <title>Wikipedia Поиск | Wire</title>
+</head>
+<body>
+    <div class="headline">
+        <a class="sil" href="https://zinteg.github.io/wire/wiki" title="Поиск чего угодно через Wiki">Главная</a>
+        <a class="sil" href="https://zinteg.github.io/wire/wiki" title="Поиск чего угодно через Wiki">Wikipedia</a>
+      </div>
+      <div class="src">
+        <a href="https://ru.wikipedia.org/" target="_blank"><img class="srcimg" src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png" alt=""></a>
+        <div class="search">
+          <form id="searchForm" action="https://ru.wikipedia.org/wiki/Special:Search" method="get" target="_blank">
+              <input class="message" type="text" placeholder="Поиск по Википедии" id="searchInput" name="search" title="Введите текст...">
+              <div class="clear"><img src="https://jtglkhjgkhtgkh.github.io/wire/img/clear.svg" alt="Clear search"></div>
+              <div id="search-suggestions"></div>
+            </form>          
+          <div class="sico" role="button" onclick="submitSearch(event)" title="Кнопка поиска" id="search-btn">Найти</div>
+        </div>   
+      </div>
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('search-btn');
+
+    function submitSearch(event) {
+        event.preventDefault(); // предотвращение отправки запроса по умолчанию
+        const searchQuery = document.getElementById('searchInput').value;
+        if (searchQuery.length === 0) {
+          return;
+        }
+        const wikiUrl = `https://ru.wikipedia.org/wiki/${searchQuery}`;
+        window.open(wikiUrl, '_blank');
+      }
+  </script>
+</body>
+</html>
