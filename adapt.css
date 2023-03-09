@@ -3,22 +3,11 @@
         border: none;
         font-size: 1.12rem;
         padding-right: 3rem;
-        color: white;
-        outline: none;
-        padding-left: 3.5rem;
-        width: 10rem;
-      }
-      input#searchInput.message-en {
-        border: none;
-        font-size: 1.12rem;
-        padding-right: 3rem;
-        color: white;
         outline: none;
         padding-left: 3.5rem;
         width: 10rem;
       }
       a li{
-        color: white;
         text-decoration: none;
         list-style: none;
         margin-left: .2rem;
@@ -36,7 +25,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #fff;
       width: 8.8rem;
       border-radius: 2rem;
       margin: .6rem;
@@ -56,4 +44,23 @@
     border-radius: 0.6rem;
     color: #fff;
   }
+  .sico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 4rem;
+    background-color: #ffcc00;
+    margin-right: .7rem;
+    border-radius: .8rem;
+    font-size: .9rem;
+    color: #000;
+    user-select: none;
+    cursor: pointer;
+}
+    
+.sico:hover {
+    background-color: #ecbd01;
+    color: #000;
+}
 }
