@@ -46,12 +46,3 @@ searchImg.addEventListener('click', function(event) {
   changeSearchEngine();
 });
 
-function submitSearch() {
-  const searchText = searchInput.value;
-  let searchUrl = searchText.trim();
-  if (!searchUrl.startsWith("http://") && !searchUrl.startsWith("https://")) {
-    searchUrl = "http://" + searchUrl;
-  }
-  searchForm.action = searchUrl;
-  searchForm.submit();
-}
